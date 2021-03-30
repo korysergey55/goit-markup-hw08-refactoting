@@ -1,16 +1,14 @@
 (() => {
-    const menuBtnRef = document.querySelector("[data-menu-open]");
-    const mobileMenuRef = document.querySelector("[data-menu]");
-    const mobileBtnClose = document.querySelector("[data-menu-close]");
+    const mobileMenuRef = document.querySelector("[data-mobile-menu]");
+    const menuBtnOpenRef = document.querySelector("[data-mobile-menu-open]");
+    const menuBtnCloseRef = document.querySelector("[data-mobile-menu-close]");
 
 
-    menuBtnRef.addEventListener("click", () => {
-
-    menuBtnRef.classList.toggle("is-open");
+    menuBtnOpenRef.addEventListener("click", () => {
     mobileMenuRef.classList.toggle("is-open");
     });
 
-    mobileBtnClose.addEventListener("click", () => {
+    menuBtnCloseRef.addEventListener("click", () => {
     mobileMenuRef.classList.toggle("is-open");
     });
 })();
