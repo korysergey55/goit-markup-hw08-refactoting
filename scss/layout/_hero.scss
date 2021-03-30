@@ -1,0 +1,110 @@
+/* ====================== HERO-MOBILE =====================================*/
+.overlay{
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0;
+
+  width: 480px;
+  min-height: 400px;
+  text-align: center;
+  background-image: url(../images/hero/overlay-bg-mobile.png), url(../images/hero/overlay-mobile.jpg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color:  #C4C4C4;
+
+  .title{
+    margin: 0 auto;
+    padding-top: 118px;
+    padding-left: 0;
+       
+    min-width: 360px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .main-button{
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-bottom: 118px;
+    padding: 10px 32px;
+
+    min-width: 200px;
+    
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #2196F3;
+    border:transparent;
+    border-radius: 4px;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    &:hover,
+    &:focus{
+        outline: none;
+    }
+  }
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: url( ../images/hero/overlay-mobile@2x.jpg);
+  }
+}
+/* ====================== HERO-TABLET =====================================*/    
+  @media screen and (min-width: 768px){
+.overlay{
+  background-image: url(../images/hero/overlay-bg-tablet.png), url(../images/hero/overlay-tablet.jpg);
+  min-height: 400px;
+  width: 768px;
+  
+  .title{
+    margin-right: 204px;
+    margin-left: 204px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    .overlay {
+    background-image: url( ../images/hero/overlay-tablet@2x.jpg);
+  }
+}
+}
+/* ====================== HERO-DASKTOP ================================*/
+@media screen and (min-width: 1200px){
+.overlay{
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1600px;
+  min-height: 600px;
+  background-image: url(../images/hero/overlay-bg.png), url(../images/hero/overlay.jpg);
+  
+  .title{
+    padding-top: 200px;
+    margin: 0 auto ;
+
+    min-width: 696px;
+    font-size: 44px;
+    line-height: 1.3;
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    .overlay {
+    background-image: url( ../images/hero/overlay@2x.jpg);
+  }
+}
+}

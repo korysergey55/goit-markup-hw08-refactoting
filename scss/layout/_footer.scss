@@ -1,0 +1,206 @@
+/* ======================fOOTER-MOBILE=========================================*/
+.footer{
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: $baner-color;
+
+  .logo{
+    text-align: center;
+  }
+}
+.footer-left-side{
+  .address{
+    display: block;
+    margin: 20px auto 8px auto;
+          
+    font-style: normal;
+    line-height: 1.71;
+    text-align: center;
+    color:#FFFFFF;
+    text-decoration: none;
+  }
+  .contact{
+    display: block;
+    font-style: normal;
+    line-height: 1.71;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+      
+    .item:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+.footer-social-title{
+  margin-top: 60px;
+  margin-bottom:20px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer-social-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  
+.footer-social-item{
+    margin-right: 10px;
+}
+.footer-social-link{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  
+  width: 44px;
+  height: 44px;
+  fill: #FFFFFF;
+  background-color:rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $akcent-color;
+      cursor: pointer;
+    }
+  }
+}
+/* ======================FOOTER-FORM-MOBILE=======================================*/
+.title-footer-form{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.footer-form-email{
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  
+  width: 100%;
+  max-width: 450px;
+  min-height: 50px;
+  text-align: left;
+  color: #FFFFFF;
+  background-color: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  &:focus{
+      outline: none;
+  }
+}
+.footer-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 29px;
+  margin: 0 auto;
+  
+  min-width: 200px;
+  min-height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+
+  outline: none;
+  border: none;
+  background-color: #2196F3;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+  }
+}
+.footer-button-logo{
+  display: block;
+  margin: 13px 28px 13px 10px ;
+  fill: #FFFFFF;
+  }
+/* ======================fOOTER-TABLET=========================================*/
+@media screen and (min-width: 768px){
+  .thumb-footer-tablet{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .footer-social-title{
+    margin-top: 0;
+  }
+  .footer-social-list{
+    margin-bottom: 0;
+  }
+  .thumb-form{
+    margin-top: 60px;
+  }
+  .footer-form-email{
+       margin: 0 160px 20px 152px;
+  }
+  }
+/* ======================fOOTER-DASKTOP=========================================*/
+@media screen and (min-width: 1200px){
+  .footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .footer-left-side{
+    
+    .logo{
+      text-align: left;
+    }
+    .address{
+      text-align: left;
+    }
+    .contact{
+      text-align: left;
+    }
+  }
+  .footer-social{
+    margin-left:70px;
+  } 
+  .thumb-form{
+    margin: 0;
+  }
+  .title-footer-form{
+    margin-top:0;
+    text-align: left;
+  }
+  .thumb-footer-join{
+    display: flex;
+   
+    .footer-form-email{
+      margin: 0 auto;
+      margin-right: 12px;
+      min-width: 358px;
+    }
+    .footer-button{
+      display: flex;
+      justify-content: space-around;
+      min-width: 200px;
+    }
+  }
+}
