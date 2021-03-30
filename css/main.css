@@ -716,6 +716,10 @@ body {
 }
 
 /* ====================== FEATURES-MOBILE ===========================================*/
+.features-list .item {
+  overflow: hidden;
+}
+
 .features-list .features-logo {
   display: flex;
   align-items: center;
