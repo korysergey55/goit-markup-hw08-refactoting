@@ -110,22 +110,26 @@ body {
   }
 }
 .title {
+  margin-bottom: 30px;
   font-weight: bold;
   font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
-  margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .title {
     font-style: normal;
-    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-style: normal;
     font-size: 36px;
     line-height: 1.16;
-    margin-bottom: 50px;
   }
 }
 /* ====================== Components ================================*/
@@ -181,8 +185,9 @@ body {
 /* ====================== MODAL-FORM-DASKTOP ===========================================*/
 @media screen and (min-width: 1200px) {
   .modal-window {
-    max-width: 528px;
-    max-height: 580px;
+    min-width: 528px;
+    min-height: 580px;
+    overflow: hidden;
   }
 }
 /* ======================MODAL-FORM-MOBILE,TABLET===================================*/
@@ -190,9 +195,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
-  margin-left: auto;
-  margin-right: 8px;
+  margin: 8px 8px 0 auto;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -203,8 +206,7 @@ body {
   outline: none;
   cursor: pointer;
 }
-
-.modal-close-svg {
+.modal-button-close .modal-close-svg {
   display: flex;
   width: 18px;
   height: 18px;
@@ -218,17 +220,8 @@ body {
   fill: #2196f3;
 }
 
-/* ====================== MODAL-FORM-MOBILE,TABLET ===========================================*/
-.modal-form {
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-}
-
 .title-form {
-  margin: 40px;
-  margin-top: 2px;
-  margin-bottom: 12px;
+  margin: 2px 40px 12px 40px;
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
@@ -237,11 +230,15 @@ body {
   color: #212121;
 }
 
+.modal-form {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
 .label {
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 4px;
-  margin-left: 40px;
+  margin: 10px auto 4px 40px;
   display: block;
   font-size: 12px;
   line-height: 1.166;
@@ -267,8 +264,7 @@ body {
 .modal-form-icon-thumb {
   position: relative;
 }
-
-.modal-icon-svg {
+.modal-form-icon-thumb .modal-icon-svg {
   position: absolute;
   left: 12%;
   top: 30%;
@@ -288,7 +284,7 @@ body {
 
 .modal-texterea {
   display: block;
-  margin: 0 40px;
+  margin: 0 auto;
   padding: 10px;
   width: 370px;
   height: 120px;
@@ -303,10 +299,7 @@ body {
 }
 
 .modal-button-sent {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  margin-left: 164px;
-  margin-right: 164px;
+  margin: 30px auto 40px auto;
   padding: 10px 55px;
   font-weight: bold;
   font-size: 16px;
@@ -347,10 +340,7 @@ body {
 }
 /* ====================== CHECKBOX ===========================================*/
 .label-checkbox {
-  margin-top: 20px;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 0 auto;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -413,6 +403,7 @@ body {
   text-decoration: none;
 }
 
+/* ====================== HEADER-MOBILE-MENU =====================================*/
 @media screen and (max-width: 768px) {
   .header-menu {
     display: flex;
@@ -513,21 +504,18 @@ body {
     justify-content: space-between;
     align-items: center;
   }
-  .header .container .mobile-button-open {
-    display: none;
-  }
-  .header .container .mobile-button-close {
-    display: none;
-  }
   .header .container .header-social {
     display: none;
-  }
-  .header .container .logo {
-    margin: 26px 0;
   }
 
   .header-menu {
     margin-right: 88px;
+  }
+  .header-menu .logo {
+    margin: 26px 0;
+  }
+  .header-menu .mobile-button-open {
+    display: none;
   }
 
   .header-wraper {
@@ -538,6 +526,9 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+  .header-wraper .mobile-button-close {
+    display: none;
   }
 
   .navi-list {
@@ -598,19 +589,12 @@ body {
 }
 /* ====================== HEADER-DASKTOP =====================================*/
 @media screen and (min-width: 1200px) {
-  .header .logo {
-    margin: 25px 0px;
-    min-width: 145px;
-  }
-
   .header-menu {
     margin-right: 93px;
   }
-
-  .navi-list {
-    justify-content: center;
-    margin-right: auto;
-    margin-left: 0;
+  .header-menu .logo {
+    margin: 25px 0px;
+    min-width: 145px;
   }
 
   .header-wraper {
@@ -618,12 +602,16 @@ body {
     justify-content: flex-end;
     margin: 0;
   }
-
-  .header-contact {
+  .header-wraper .navi-list {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .header-wraper .header-contact {
     display: flex;
     justify-content: flex-end;
   }
-  .header-contact .item.item:not(:last-child) {
+  .header-wraper .header-contact .item:not(:last-child) {
     margin-right: 30px;
   }
 }
@@ -840,8 +828,6 @@ body {
 /* ====================== TEAM-MOBILE==========================================*/
 .team {
   background-color: #F5F4FA;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .team-list {
@@ -859,10 +845,7 @@ body {
   margin-bottom: 30px;
 }
 .team-list .title {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 30px auto 10px auto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -871,7 +854,6 @@ body {
 }
 .team-list .text {
   margin-bottom: 16px;
-  margin-top: 0;
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
@@ -882,8 +864,10 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  min-width: 206px;
-  min-height: 44px;
+  width: 100%;
+  height: 100%;
+  max-width: 206px;
+  max-height: 44px;
 }
 .team-list .social-list .social-link {
   display: flex;
@@ -913,13 +897,6 @@ body {
 
 /* ====================== TEAM-TABLET==========================================*/
 @media screen and (min-width: 768px) {
-  .team {
-    background-color: #F5F4FA;
-  }
-  .team .title {
-    font-size: 33px;
-  }
-
   .team-list {
     display: flex;
     justify-content: space-around;
@@ -937,21 +914,11 @@ body {
 }
 /* ====================== TEAM-DASKTOP==========================================*/
 @media screen and (min-width: 1200px) {
-  .team {
-    background-color: #F5F4FA;
-  }
-  .team .title {
-    margin-top: 0;
-    margin-bottom: 50px;
-    font-size: 36px;
-  }
-
   .team-list {
     flex-wrap: nowrap;
   }
   .team-list .title {
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin: 30px inherit 10px inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
@@ -1032,8 +999,7 @@ body {
 }
 /* ======================fOOTER-MOBILE=========================================*/
 .footer {
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding: 60px 15px 60px 15px;
   background-color: #2f303a;
 }
 .footer .logo {
@@ -1103,10 +1069,7 @@ body {
 /* ======================FOOTER-FORM-MOBILE=======================================*/
 .title-footer-form {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   font-weight: bold;
   line-height: 1.4;
   letter-spacing: 0.03em;
@@ -1116,8 +1079,7 @@ body {
 }
 
 .footer-form-email {
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   padding-left: 16px;
   width: 100%;
   max-width: 450px;
@@ -1156,8 +1118,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-
-.footer-button-logo {
+.footer-button .footer-button-logo {
   display: block;
   margin: 13px 28px 13px 10px;
   fill: #FFFFFF;
@@ -1184,7 +1145,8 @@ body {
   }
 
   .footer-form-email {
-    margin: 0 160px 20px 152px;
+    display: block;
+    margin: 0 auto 20px auto;
   }
 }
 /* ======================fOOTER-DASKTOP=========================================*/
@@ -1212,22 +1174,19 @@ body {
   .thumb-form {
     margin: 0;
   }
-
-  .title-footer-form {
+  .thumb-form .title-footer-form {
     margin-top: 0;
     text-align: left;
   }
-
-  .thumb-footer-join {
+  .thumb-form .thumb-footer-join {
     display: flex;
   }
-  .thumb-footer-join .footer-form-email {
+  .thumb-form .thumb-footer-join .footer-form-email {
     margin: 0 auto;
     margin-right: 12px;
     min-width: 358px;
   }
-  .thumb-footer-join .footer-button {
-    display: flex;
+  .thumb-form .thumb-footer-join .footer-button {
     justify-content: space-around;
     min-width: 200px;
   }

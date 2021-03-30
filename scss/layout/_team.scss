@@ -1,8 +1,6 @@
 /* ====================== TEAM-MOBILE==========================================*/
 .team {
   background-color: #F5F4FA;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .team-list {
   margin: 0;
@@ -20,11 +18,7 @@
     }
   }
   .title {
-    margin-top:30px;
-    margin-bottom:10px;
-    margin-left: auto;
-    margin-right: auto;
-  
+    margin:30px auto 10px auto;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -33,8 +27,6 @@
   }
   .text{
     margin-bottom:16px;
-    margin-top: 0;
-
     font-size: 16px;
     line-height: 1.9;
     text-align: center;
@@ -45,9 +37,11 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-     
-    min-width: 206px;
-    min-height: 44px;
+    
+    width:100% ;
+    height: 100%;
+    max-width: 206px;
+    max-height: 44px;
 
     .social-link{
       display: flex;
@@ -81,13 +75,6 @@
 }
 /* ====================== TEAM-TABLET==========================================*/
 @media screen and (min-width: 768px){
-  .team{
-    background-color: #F5F4FA;
-    
-    .title{
-      font-size: 33px;
-    }
-  }
   .team-list{
     display: flex;
     justify-content: space-around;
@@ -107,22 +94,12 @@
 }
 /* ====================== TEAM-DASKTOP==========================================*/
 @media screen and (min-width: 1200px){
-.team{
-  background-color: #F5F4FA;
-  
-  .title{
-    margin-top: 0;
-    margin-bottom: 50px;
-    font-size: 36px;
-  }
-}
+
 .team-list{
   flex-wrap: nowrap;
 
   .title{
-    margin-top: 30px;
-    margin-bottom: 10px;
-      
+    margin: 30px inherit 10px inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
